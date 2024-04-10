@@ -1,0 +1,67 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    padding-top: 50px;
+}
+.card{
+    background: #191c29;
+    width: 250px;
+    height: 500px;
+    padding: 3px;
+    position: relative;
+    border-radius: 6px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    font-size: 1.5rem;
+    color: rgb(88 199 250 / 0%);
+    cursor: pointer;
+    font-family: cursive;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: 0.4s;
+    background-image: url('a.jpg');
+    background-size: cover;
+
+}
+.card:hover{
+    background-image: url('d.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: rgb(88 199 250 / 100%);
+    transition: color 1s;
+    transition: 0.4s ease-in-out;
+}
+.card {
+    position: relative;
+    animation: lighting 2s linear infinite;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    opacity: 0.7;
+    animation: colorChange 4s linear infinite;
+}
+
+@keyframes lighting {
+    0% {
+        box-shadow: 0 0 10px 10px rgba(255, 0, 0, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 50px 50px rgba(0, 255, 0, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 100px 100px rgba(0, 0, 255, 0.5);
+    }
+}
